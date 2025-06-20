@@ -8,7 +8,7 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <h1 className="font-playfair text-5xl md:text-7xl mb-6 animate-fade-in-up font-semibold mx-[4px] px-[8px] text-center">Самый нестандартный оркестр России</h1>
+        <h1 className="font-playfair text-5xl md:text-7xl mb-6 animate-fade-in-up font-semibold px-[8px] text-center mx-[33px]">Самый нестандартный оркестр России</h1>
         <p className="text-xl md:text-2xl mb-8 font-light animate-fade-in-up" style={{
         animationDelay: '0.3s'
       }}>
