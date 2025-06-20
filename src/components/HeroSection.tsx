@@ -14,9 +14,7 @@ const HeroSection = () => {
       }} className="text-xl md:text-2xl mb-8 font-light animate-fade-in-up py-[3px]">Микс юмора, искусства и незабываемой музыки</p>
         <Button size="lg" className="bg-orchestra-red hover:bg-orchestra-red/90 text-white px-8 py-6 text-lg font-medium transition-all duration-300 transform hover:scale-105 animate-fade-in-up" style={{
         animationDelay: '0.6s'
-      }}>
-          Buy Tickets
-        </Button>
+      }}>Купить билет</Button>
       </div>
 
       {/* Scroll indicator */}
