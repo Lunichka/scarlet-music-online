@@ -9,11 +9,9 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <h1 className="font-playfair text-5xl md:text-7xl mb-6 animate-fade-in-up font-semibold px-[8px] text-center mx-[33px]">Самый нестандартный оркестр России</h1>
-        <p className="text-xl md:text-2xl mb-8 font-light animate-fade-in-up" style={{
+        <p style={{
         animationDelay: '0.3s'
-      }}>
-          A mix of humor, art, and unforgettable music
-        </p>
+      }} className="text-xl md:text-2xl mb-8 font-light animate-fade-in-up py-[3px]">Микс юмора, искусства и незабываемой музыки</p>
         <Button size="lg" className="bg-orchestra-red hover:bg-orchestra-red/90 text-white px-8 py-6 text-lg font-medium transition-all duration-300 transform hover:scale-105 animate-fade-in-up" style={{
         animationDelay: '0.6s'
       }}>
