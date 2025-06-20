@@ -5,16 +5,27 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Link } from "react-router-dom";
 
 const Concerts = () => {
   const upcomingConcerts = [
+    {
+      date: "December 22, 2024",
+      time: "20:00",
+      title: "The Snow Queen",
+      venue: "Mariinsky Theatre",
+      description: "A magical one-act theatrical concert based on Hans Christian Andersen's fairy tale",
+      price: "From 2,500 ₽",
+      slug: "snow-queen"
+    },
     {
       date: "March 6, 2024",
       time: "19:00",
       title: "Scarlet Sails",
       venue: "Capella",
       description: "A magical evening of Russian classical music and contemporary arrangements",
-      price: "From 1,500 ₽"
+      price: "From 1,500 ₽",
+      slug: "scarlet-sails"
     },
     {
       date: "March 20, 2024",
@@ -22,7 +33,8 @@ const Concerts = () => {
       title: "Movie Soundtracks Night",
       venue: "Mariinsky Theatre",
       description: "From Harry Potter to Star Wars - the most beloved film music",
-      price: "From 2,000 ₽"
+      price: "From 2,000 ₽",
+      slug: "movie-soundtracks"
     },
     {
       date: "April 3, 2024",
@@ -30,7 +42,8 @@ const Concerts = () => {
       title: "Comedy & Classics",
       venue: "Philharmonic Hall",
       description: "Our signature blend of humor and timeless classical pieces",
-      price: "From 1,800 ₽"
+      price: "From 1,800 ₽",
+      slug: "comedy-classics"
     },
     {
       date: "April 18, 2024",
@@ -38,7 +51,8 @@ const Concerts = () => {
       title: "Russian Soul",
       venue: "Capella",
       description: "Deep dive into the heart of Russian musical tradition",
-      price: "From 1,500 ₽"
+      price: "From 1,500 ₽",
+      slug: "russian-soul"
     },
     {
       date: "May 2, 2024",
@@ -46,15 +60,8 @@ const Concerts = () => {
       title: "Modern Classics",
       venue: "Aurora Concert Hall",
       description: "Contemporary compositions that will become tomorrow's classics",
-      price: "From 1,700 ₽"
-    },
-    {
-      date: "May 15, 2024",
-      time: "19:00",
-      title: "Family Concert",
-      venue: "Youth Palace",
-      description: "Interactive musical experience for the whole family",
-      price: "From 800 ₽"
+      price: "From 1,700 ₽",
+      slug: "modern-classics"
     }
   ];
 
@@ -108,9 +115,20 @@ const Concerts = () => {
                       <span className="font-semibold text-orchestra-red">{concert.price}</span>
                     </div>
                     
-                    <Button className="w-full bg-orchestra-red hover:bg-orchestra-red/90 text-white transition-all duration-300">
-                      Buy Tickets
-                    </Button>
+                    <div className="space-y-3">
+                      <Button className="w-full bg-orchestra-red hover:bg-orchestra-red/90 text-white transition-all duration-300">
+                        Buy Tickets
+                      </Button>
+                      
+                      <Link to={`/concert/${concert.slug}`}>
+                        <Button 
+                          variant="outline" 
+                          className="w-full border-orchestra-red text-orchestra-red hover:bg-orchestra-red hover:text-white transition-all duration-300"
+                        >
+                          More Info
+                        </Button>
+                      </Link>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
