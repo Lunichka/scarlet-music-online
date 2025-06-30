@@ -7,6 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import SubscriptionPopup from "@/components/SubscriptionPopup";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Music } from "lucide-react";
 
 const Index = () => {
   const featuredConcerts = [
@@ -76,8 +77,24 @@ const Index = () => {
       </section>
 
       {/* About Preview */}
-      <section className="py-20 px-4 bg-white/50">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 bg-white/50 relative overflow-hidden">
+        {/* Subtle Musical Motifs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <Music 
+            className="absolute top-16 right-20 w-4 h-4 text-charcoal/5 animate-[float_10s_ease-in-out_infinite]" 
+            style={{ animationDelay: '0s' }}
+          />
+          <Music 
+            className="absolute bottom-20 left-16 w-3 h-3 text-charcoal/8 animate-[float_8s_ease-in-out_infinite]" 
+            style={{ animationDelay: '4s' }}
+          />
+          
+          {/* Sound Wave Lines */}
+          <div className="absolute top-32 left-1/4 w-10 h-0.5 bg-charcoal/4 animate-[float_9s_ease-in-out_infinite]" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-32 right-1/4 w-8 h-0.5 bg-charcoal/6 animate-[float_7s_ease-in-out_infinite]" style={{ animationDelay: '6s' }}></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-8 text-charcoal animate-fade-in">
             Who We Are
           </h2>

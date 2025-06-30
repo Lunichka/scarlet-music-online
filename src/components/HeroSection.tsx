@@ -1,5 +1,7 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Music } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -14,6 +16,31 @@ const HeroSection = () => {
           }}
         />
       </div>
+
+      {/* Floating Musical Motifs */}
+      <div className="absolute inset-0 pointer-events-none z-15">
+        <Music 
+          className="absolute top-20 left-16 w-4 h-4 text-white/10 animate-[float_8s_ease-in-out_infinite]" 
+          style={{ animationDelay: '0s' }}
+        />
+        <Music 
+          className="absolute top-1/3 right-24 w-3 h-3 text-white/15 animate-[float_10s_ease-in-out_infinite]" 
+          style={{ animationDelay: '3s' }}
+        />
+        <Music 
+          className="absolute bottom-1/3 left-1/4 w-5 h-5 text-white/8 animate-[float_9s_ease-in-out_infinite]" 
+          style={{ animationDelay: '6s' }}
+        />
+        <Music 
+          className="absolute top-1/2 left-3/4 w-3 h-3 text-white/12 animate-[float_7s_ease-in-out_infinite]" 
+          style={{ animationDelay: '2s' }}
+        />
+        
+        {/* Sound Wave Lines */}
+        <div className="absolute top-32 right-1/3 w-12 h-0.5 bg-white/8 animate-[float_6s_ease-in-out_infinite]" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-48 left-1/3 w-8 h-0.5 bg-white/10 animate-[float_8s_ease-in-out_infinite]" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-2/3 right-16 w-6 h-0.5 bg-white/6 animate-[float_7s_ease-in-out_infinite]" style={{ animationDelay: '5s' }}></div>
+      </div>
       
       {/* Content */}
       <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
@@ -26,13 +53,15 @@ const HeroSection = () => {
         >
           A mix of humor, art, and unforgettable music
         </p>
-        <Button 
-          size="lg" 
-          className="bg-orchestra-red hover:bg-orchestra-red/90 text-white px-8 py-6 text-lg font-medium transition-all duration-300 transform hover:scale-105 animate-fade-in-up" 
-          style={{ animationDelay: '0.6s' }}
-        >
-          Buy Tickets
-        </Button>
+        <Link to="/concert/snow-queen">
+          <Button 
+            size="lg" 
+            className="bg-orchestra-red hover:bg-orchestra-red/90 text-white px-8 py-6 text-lg font-medium transition-all duration-300 transform hover:scale-105 animate-fade-in-up" 
+            style={{ animationDelay: '0.6s' }}
+          >
+            Buy Tickets
+          </Button>
+        </Link>
       </div>
 
       {/* Scroll indicator */}
